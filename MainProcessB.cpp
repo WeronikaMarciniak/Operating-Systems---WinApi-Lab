@@ -44,19 +44,7 @@ int main(void)
 		CloseHandle(pi1.hProcess);//process 1 closes
         CloseHandle(pi1.hThread);
     }
-    LARGE_INTEGER li;
-    double PCFreq = 0.0;
-    __int64 CounterStart = 0; 
-    if(!QueryPerformanceFrequency(&li))
-    cout << "QueryPerformanceFrequency failed!\n";
-
-    PCFreq = double(li.QuadPart)/1000.0;
-
-    QueryPerformanceCounter(&li);
-    CounterStart = li.QuadPart;
-    QueryPerformanceCounter(&li);
-    double c= (li.QuadPart - CounterStart)/PCFreq;
-    cout<<"Performance time: "<<c<< " miliseconds";
+    
     cin.sync();
     cin.ignore();
 
