@@ -15,8 +15,8 @@ int main(void)
     si1.cb = sizeof si1;
     si2.cb = sizeof si2;
     PROCESS_INFORMATION pi1 = { 0 }, pi2 = { 0 };
-    const TCHAR* target1 = _T("C:\\USERS\\Admin\\Documents\\Random.exe");
-    const TCHAR* target2 = _T("C:\\USERS\\Admin\\Documents\\ReadingRandomsBSemaphore.exe");
+    const TCHAR* target1 = _T("Random.exe");
+    const TCHAR* target2 = _T("ReadingRandomsBSemaphore.exe");
     hMutex = CreateMutex(NULL,0,NULL);
    if (!CreateProcess(target1, GetCommandLine(), 0, FALSE, 0, CREATE_SUSPENDED, 0, 0, &si1, &pi1)) //CREATE_SUSPENDED argument makes process 1 hanging and waiting until process 2 excecute
     {
