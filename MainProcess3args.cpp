@@ -16,8 +16,8 @@ int main(int argc, TCHAR *argv[])
     si1.cb = sizeof si1;
     si2.cb = sizeof si2;
     PROCESS_INFORMATION pi1 = { 0 }, pi2 = { 0 };
-    const TCHAR* target1 = _T("C:\\USERS\\Admin\\Documents\\Random3args.exe");
-    const TCHAR* target2 = _T("C:\\USERS\\Admin\\Documents\\ReadingRandoms3args.exe");
+    const TCHAR* target1 = _T("Random3args.exe");
+    const TCHAR* target2 = _T("ReadingRandoms3args.exe");
     int times=0;//second argument,defines time distance beetween generating numbers
     int repeat = 0;//third argument, defines how many times the numbers have to be generated and how many times the operations on values must be done
     
